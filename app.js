@@ -16,5 +16,14 @@ var main = function(){
     $(".comment-input button").on("click", function(event){
         addComentario();
     });
+    $(".comment-input input").on("keypress", function(event){
+        if(event.keyCode === 13){
+            addComentario();
+        }
+    });
+    /*$(".comment-input input").on("keypress", function(event){
+        console.log("Esse é um KeyCode" + event.keyCode);
+        addComentario();
+    });*/
 };
 $(document).ready(main);
